@@ -1,0 +1,69 @@
+%% -----------------------------------------------------
+%% Sample free form document written in NSERC format
+%%
+%% Declare the document as "nserc-appendix"; use either 11 or 12pt
+%% fonts, and specify whether the document is in French or English
+%% -----------------------------------------------------
+
+\documentclass[12pt, english]{nserc-appendix}
+
+
+
+%% --------------------------
+%% Inclusion of a basic configuration file. Go see this file: there are
+%% parameters (such as your name, etc.) to fill in. This avoids repeating
+%% the same info in the case you produce multiple documents for the same
+%% application.
+%% --------------------------
+\input{application-config.tex}
+%\includepackage{pslatex}
+%% ----------
+%% Set the title of the document in the PDF's metadata
+%% ----------
+\hypersetup{%
+  pdftitle = {DG_proposal}
+}
+%\usepackage{blindtext}
+%\usepackage[a4paper, total={8.5in, 11in}]{geometry}
+
+\begin{document}
+
+
+\title{Your Title}
+%% ----------
+%% Set start page number of the document. Change this depending on
+%% the part you are writing, and its position relative to the rest of
+%% the application.
+
+%% ----------
+\setcounter{page}{1}
+\maketitle
+
+%\vspace{-15pt}
+\section{Section 1}
+\vspace{-10pt}
+%has provided groundwork and initial prototype of 
+Here is a sample citation~\cite{cheshmi2017sympiler}. 
+% comment the following text
+\lipsum[2-10]
+
+
+
+
+
+%% ------------
+%% References
+%% NSERC applications require the references to be in a distinct PDF,
+%% uploaded separately from the main text. The hack I suggest is to
+%% write the document *with* the references at the end (like a normal
+%% article, and then to split it in two manually (for example, using pdftk).
+%% For Linux systems, the script split-application.sh bundled with this
+%% package does exactly that.
+%% ------------
+\newpage
+\pagestyle{plain}
+\bibliographystyle{abbrv}
+\bibliography{DG}
+
+\end{document}
+%% :folding=explicit:maxLineLen=76:wrap=soft:

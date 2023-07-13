@@ -1,0 +1,68 @@
+%% -----------------------------------------------------
+%% Configuration of an NSERC application
+%% Defines a few macros that are global to all documents of the application
+%% ----------------------------------------------------
+
+%% If your application involves a company, put the name of the company
+%% in a macro rather than writing it directly.
+\newcommand{\namecompany}{Temporal inc.}
+
+%% Application year. Only appears in the metadata of the generated PDF.
+\newcommand{\applicationyear}{2023}
+
+%% The list of all authors of the application. Again, only useful for the
+%% PDF metadata
+\newcommand{\authorlist}{Kazem Cheshmi}
+
+%% The name and NSERC PIN of the main applicant
+\nsercname{Kazem Cheshmi}
+\nsercpin{}
+
+%% Documents are not dated
+\date{}
+
+%% Paragraphes français
+%\setlength{\parindent}{0pt}
+
+%% Hack to have list items displayed in a more compact way
+\usepackage{paralist}
+\setlength{\pltopsep}{4pt}
+\setlength{\plitemsep}{4pt}
+
+%% ----------
+%% Loading a few packages. These are all optional and can be commented
+%% out if you with. Feel free to add others.
+%% ----------
+\usepackage[hidelinks]{hyperref} 
+\hypersetup{%
+  pdfauthor = {\authorlist{}},
+  pdfcreator = {NSERC LaTeX Template V1.4},
+  pdfsubject = {NSERC \applicationyear{} \namecompany{}}
+}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{todonotes}
+\usepackage{comment}
+
+\usepackage{setspace}
+\setstretch{1}
+
+\usepackage{tikz}
+\usepackage{xcolor}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,fill,inner sep=1.6pt] (char) {\textcolor{white}{#1}};}}
+
+% the following package is for random text generation
+\usepackage{lipsum} 
+
+
+%% Useful: a few "todo" macros to display colored boxes with remarks
+%% and comments
+\newcommand{\todoemmett}[1]{\todo[inline,caption={},color=cyan]{\sf\small Emmett: #1}}
+\newcommand{\todomarty}[1]{\todo[inline,caption={},color=pink]{\sf\small Marty: #1}}
+\newcommand{\todoall}[1]{\todo[inline,caption={},color=yellow]{\sf\small #1}}
+
+%% This will print a "DRAFT" watermark on all pages.
+%% Uncomment the next two lines once the application is ready.
+% \usepackage{draftwatermark}
+% \SetWatermarkText{DRAFT}
