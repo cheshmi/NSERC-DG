@@ -1,5 +1,4 @@
 # A LaTeX template for NSERC-style documents
-==========================================
 
 Fill in the info in `application-config.tex` and write your text in
 `DG.tex` (which you can rename to whatever you like). The rest should
